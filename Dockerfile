@@ -12,6 +12,7 @@ RUN /var/lib/dpkg/info/ca-certificates-java.postinst configure
 
 # Set path
 ENV PATH ${PATH}:/usr/local/gradle-$GRADLE_VERSION/bin
+WORKDIR /usr/local
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
