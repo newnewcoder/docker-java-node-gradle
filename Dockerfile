@@ -1,8 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER Karl J. Overå
 
-ENV NODE_VERSION 8.4.0
-ENV GRADLE_VERSION 4.1
+ENV NODE_VERSION 10.10.0
+ENV GRADLE_VERSION 4.10.1
 
 RUN apt-get update
 RUN apt-get -y install openjdk-8-jdk wget curl unzip xz-utils python build-essential ssh git
@@ -15,7 +15,7 @@ ENV PATH ${PATH}:/usr/local/gradle-$GRADLE_VERSION/bin
 WORKDIR /usr/local
 
 # Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs
 
 # Install gradle
