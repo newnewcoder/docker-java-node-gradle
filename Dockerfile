@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM ubuntu:16.04
 MAINTAINER Karl J. Overå
 
 ENV NODE_VERSION 8.4.0
